@@ -1,1 +1,1 @@
-Web de recursos per l'assignatura Disseny d'estris de processat de xapa i estampació(FMC0_M303) del Cicle Formatiu Programació de la Producció i Disseny en Fabricació Mecànica (3x2) de l'Institut Pompeu Fabra curs 2025/2026 
+Web de recursos per l'assignatura Disseny d'estris de processat de xapa i estampació (FMC0_M303) del Cicle Formatiu Programació de la Producció i Disseny en Fabricació Mecànica (3x2) de l'Institut Pompeu Fabra curs 2025/2026 
