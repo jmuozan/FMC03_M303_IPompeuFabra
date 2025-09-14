@@ -65,5 +65,26 @@
       </div>
     </div>
 
+  <script>
+    // Navbar hide/show on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      let lastScrollY = window.scrollY;
+      const navbar = document.querySelector('.navbar');
+
+      window.addEventListener('scroll', function() {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          // Scrolling down
+          navbar.classList.add('navbar--hidden');
+        } else {
+          // Scrolling up
+          navbar.classList.remove('navbar--hidden');
+        }
+
+        lastScrollY = currentScrollY;
+      });
+    });
+  </script>
   </body>
 </html>

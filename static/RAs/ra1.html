@@ -65,6 +65,11 @@
             <p>Els processos de deformació descrits en aquest tema pertanyen a la tercera categoria i realitzen un canvi significant en les peces de metall, transformant formes inicials més voluminoses que laminars. Les formes inicials inclouen barres, tacs cilíndrics i rectangulars, planxes i altres formes similars elementals.</p>
 
             <p>Els processos de deformació volumètrica refinen les formes originals, millorant sovint les propietats mecàniques i sempre afegint valor comercial al producte. El treball d'aquests processos consisteix en sotmetre el metall a un esforç suficient per fer que flueixi plàsticament i prengui la forma desitjada.</p>
+
+            <div class="content-image-wrapper">
+                <img src="images/introduction/base.png" alt="Base dels processos de manufactura" class="content-image">
+                <p class="image-footnote">* Procesos de Manufactura – John A. Schey – 3ra Edición McGrawHill</p>
+            </div>
         </section>
 
         <section class="content-section" id="concepte">
@@ -129,6 +134,82 @@
                 </ul>
             </div>
         </section>
+
+        <section class="content-section" id="laminado">
+            <h2>2. Laminat (Rolling)</h2>
+            <p>El laminat és un procés de deformació en el qual l'espessor del material de treball es redueix mitjançant forces de compressió exercides per dos rodets oposats. Els rodets giren per arrossegar el material de treball i simultàniament comprimir-lo entre ells.</p>
+
+            <div class="content-image-wrapper">
+                <img src="images/ra1/laminado_1.png" alt="Procés de laminat amb rodets" class="content-image">
+                <p class="image-footnote">Figura 19.1 - Procés bàsic de laminat pla</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Laminat Pla</h3>
+                    <p>S'utilitza per reduir l'espessor d'una secció transversal rectangular. És el procés bàsic més comú.</p>
+                </div>
+                <div class="content-card">
+                    <h3>Laminat de Perfils</h3>
+                    <p>Una secció transversal quadrada es transforma en un perfil, com ara una biga en I.</p>
+                </div>
+            </div>
+
+            <h3>Característiques del Procés</h3>
+            <ul class="content-list">
+                <li><strong>Alta inversió de capital:</strong> Requereix equip pesat anomenat molins laminadors</li>
+                <li><strong>Producció en grans quantitats:</strong> L'alt cost d'inversió necessita volums elevats</li>
+                <li><strong>Productes estàndard:</strong> Làmines, plaques i perfils estructurals</li>
+            </ul>
+
+            <h3>Laminat en Calent vs. Fred</h3>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Laminat en Calent</h3>
+                    <p><strong>Avantatges:</strong></p>
+                    <ul>
+                        <li>Permet grans deformacions</li>
+                        <li>Materials lliures d'esforços residuals</li>
+                        <li>Propietats isotròpiques</li>
+                    </ul>
+                    <p><strong>Desavantatges:</strong></p>
+                    <ul>
+                        <li>Toleràncies menys precises</li>
+                        <li>Superfície amb capa d'òxid</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>Laminat en Fred</h3>
+                    <p><strong>Avantatges:</strong></p>
+                    <ul>
+                        <li>Toleràncies més estretes</li>
+                        <li>Superfície lliure d'òxids</li>
+                        <li>Major resistència del metall</li>
+                        <li>Acabat superficial superior</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Aplicacions en la Fabricació d'Acer</h3>
+            <p>La fabricació d'acer representa l'aplicació més comuna del laminat. El procés segueix aquesta seqüència:</p>
+
+            <div class="content-highlight">
+                <p><strong>Procés de Laminació de l'Acer</strong></p>
+                <ol>
+                    <li><strong>Lingot:</strong> Acer fos recentment solidificat</li>
+                    <li><strong>Recalfament:</strong> Fins a 1200°C en fosses de recalfament</li>
+                    <li><strong>Formes intermèdies:</strong> Llúpies, topalls o planxes</li>
+                    <li><strong>Productes finals:</strong> Segons la forma intermèdia</li>
+                </ol>
+            </div>
+
+            <h3>Productes Finals</h3>
+            <ul class="content-list">
+                <li><strong>De llúpies:</strong> Perfils estructurals i rails de ferrocarril</li>
+                <li><strong>De topalls:</strong> Barres i varetes per maquinat i forjat</li>
+                <li><strong>De planxes:</strong> Plaques, làmines i tires per construcció naval, ponts, calderes i maquinària</li>
+            </ul>
+        </section>
         </div>
     </main>
 
@@ -155,6 +236,26 @@
     </div>
 
     <script>
+        // Navbar hide/show on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            let lastScrollY = window.scrollY;
+            const navbar = document.querySelector('.navbar');
+
+            window.addEventListener('scroll', function() {
+                const currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // Scrolling down
+                    navbar.classList.add('navbar--hidden');
+                } else {
+                    // Scrolling up
+                    navbar.classList.remove('navbar--hidden');
+                }
+
+                lastScrollY = currentScrollY;
+            });
+        });
+
         // Auto-generate Table of Contents
         document.addEventListener('DOMContentLoaded', function() {
             const tocList = document.getElementById('toc-list');

@@ -93,6 +93,11 @@
   max-width: var(--container-max-width);
   padding: 0 var(--padding-base);
   z-index: 1000;
+  transition: transform var(--transition-base);
+}
+
+.navbar.navbar--hidden {
+  transform: translateX(-50%) translateY(-100%);
 }
 
 .navbar__logo {
@@ -331,6 +336,23 @@ body {
 .image-footnote a:hover {
   color: var(--color-grey-dark);
   text-decoration: underline;
+}
+
+.content-image-wrapper {
+  margin: var(--spacing-lg) 0;
+  text-align: center;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.content-image-wrapper .image-footnote {
+  text-align: center;
+  margin-top: var(--spacing-sm);
 }
 
 .footer {
