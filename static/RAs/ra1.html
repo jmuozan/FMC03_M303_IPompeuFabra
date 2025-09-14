@@ -210,6 +210,153 @@
                 <li><strong>De planxes:</strong> Plaques, làmines i tires per construcció naval, ponts, calderes i maquinària</li>
             </ul>
         </section>
+
+        <section class="content-section" id="laminat-pla">
+            <h2>2.1 Laminat Pla i la seva Anàlisi</h2>
+            <p>El laminat pla involucra el processament de planxes, tires, làmines i plaques amb secció transversal rectangular. El material es comprimeix entre dos rodets per reduir el seu espessor.</p>
+
+            <h3>Paràmetres Fonamentals</h3>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h4>Draft (d)</h4>
+                    <p><strong>d = t₀ - tf</strong></p>
+                    <p>Reducció absoluta de l'espessor en mm</p>
+                    <ul>
+                        <li>t₀ = espessor inicial</li>
+                        <li>tf = espessor final</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h4>Reducció (r)</h4>
+                    <p><strong>r = d/t₀</strong></p>
+                    <p>Fracció de l'espessor inicial que es redueix</p>
+                    <p>S'expressa com a percentatge del material original</p>
+                </div>
+            </div>
+
+            <h3>Conservació del Material</h3>
+            <p>El volumen de metall que entra als rodets ha de ser igual al volumen que en surt:</p>
+
+            <div class="content-highlight">
+                <p><strong>Conservació de Volum:</strong></p>
+                <p><strong>t₀w₀L₀ = tfwfLf</strong></p>
+                <ul>
+                    <li>w₀, wf = amplada abans i després</li>
+                    <li>L₀, Lf = longitud abans i després</li>
+                </ul>
+            </div>
+
+            <div class="content-highlight">
+                <p><strong>Conservació de Flux Volumètric:</strong></p>
+                <p><strong>t₀w₀v₀ = tfwfvf</strong></p>
+                <ul>
+                    <li>v₀, vf = velocitats d'entrada i sortida</li>
+                </ul>
+            </div>
+
+            <h3>Fenomen d'Expansió</h3>
+            <p>A més de reduir l'espessor, el laminat incrementa normalment l'amplada del material. Aquest fenomen s'anomena <strong>espargiment</strong> i és més pronunciat amb:</p>
+            <ul class="content-list">
+                <li>Baixes relacions amplada/espessor</li>
+                <li>Baixos coeficients de fricció</li>
+            </ul>
+
+            <h3>Anàlisi de Velocitats i Punt Neutre</h3>
+            <p>Els rodets entren en contacte amb el material al llarg d'un arc de contacte definit per l'angle θ. Existeix un punt crític anomenat <strong>punt de no lliscament</strong> o <strong>punt neutre</strong> on:</p>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h4>Velocitat del Rodet (vr)</h4>
+                    <p>vr > v₀ (velocitat d'entrada)</p>
+                    <p>vr < vf (velocitat de sortida)</p>
+                </div>
+                <div class="content-card">
+                    <h4>Lliscament cap Endavant (s)</h4>
+                    <p><strong>s = (vf - vr)/vr</strong></p>
+                    <p>Mesura el lliscament entre rodets i material</p>
+                </div>
+            </div>
+
+            <h3>Deformació i Esforç de Fluència</h3>
+            <p>L'esforç real experimentat pel material es basa en la relació d'espessors:</p>
+
+            <div class="content-highlight">
+                <p><strong>Deformació Real:</strong></p>
+                <p><strong>ε = ln(t₀/tf)</strong></p>
+
+                <p><strong>Esforç de Fluència Mitjà:</strong></p>
+                <p><strong>Ȳf = Kεⁿ/(1 + n)</strong></p>
+                <ul>
+                    <li>K = constant de resistència</li>
+                    <li>n = exponent d'enduriment</li>
+                </ul>
+            </div>
+
+            <h3>Fricció i Limitacions del Procés</h3>
+            <p>La fricció és essencial per al laminat. Sense ella, el procés seria impossible. El draft màxim possible està limitat per:</p>
+
+            <div class="content-highlight">
+                <p><strong>Draft Màxim:</strong></p>
+                <p><strong>dmàx = μ²R</strong></p>
+                <ul>
+                    <li>μ = coeficient de fricció</li>
+                    <li>R = radi del rodet</li>
+                </ul>
+            </div>
+
+            <h3>Coeficients de Fricció Típics</h3>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h4>Laminat en Fred</h4>
+                    <p><strong>μ ≈ 0.1</strong></p>
+                    <p>Condicions de baixa temperatura amb lubricació</p>
+                </div>
+                <div class="content-card">
+                    <h4>Laminat en Calent</h4>
+                    <p><strong>μ ≈ 0.2 - 0.4</strong></p>
+                    <p>Varia segons la temperatura de recristal·lització</p>
+                </div>
+                <div class="content-card">
+                    <h4>Condició d'Adherència</h4>
+                    <p><strong>μ ≈ 0.7</strong></p>
+                    <p>Quan la superfície calenta s'enganxa als rodets</p>
+                </div>
+            </div>
+
+            <h3>Càlculs de Força i Potència</h3>
+            <p>La força requerida pels rodets es calcula integrant la pressió unitària sobre l'àrea de contacte:</p>
+
+            <div class="content-highlight">
+                <p><strong>Força de Laminat:</strong></p>
+                <p><strong>F = w∫₀ᴸ p dL ≈ ȲfwL</strong></p>
+                <ul>
+                    <li>w = amplada del material</li>
+                    <li>p = pressió de laminat</li>
+                    <li>L = longitud de contacte</li>
+                </ul>
+
+                <p><strong>Longitud de Contacte:</strong></p>
+                <p><strong>L = √[R(t₀ - tf)]</strong></p>
+            </div>
+
+            <div class="content-highlight">
+                <p><strong>Moment de Torsió:</strong></p>
+                <p><strong>T = 0.5 × F × L</strong></p>
+
+                <p><strong>Potència Total:</strong></p>
+                <p><strong>P = 2πNFL</strong></p>
+                <ul>
+                    <li>N = velocitat rotacional (1/s)</li>
+                    <li>Factor 2 per dos rodets</li>
+                </ul>
+            </div>
+
+            <div class="content-image-wrapper">
+                <img src="images/ra1/laminado_1.png" alt="Distribució de pressions en laminat pla" class="content-image">
+                <p class="image-footnote">Figura 19.4 - Variació típica de pressió al llarg de la longitud de contacte. La pressió màxima es localitza al punt neutre.</p>
+            </div>
+
+        </section>
         </div>
     </main>
 

@@ -436,12 +436,13 @@ body {
   gap: var(--spacing-xl);
   min-height: calc(100vh - var(--navbar-height) - 80px);
   position: relative;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-base);
 }
 
 .content-container .content-wrapper {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: var(--spacing-2xl) var(--padding-base);
+  padding: var(--spacing-md) 0 var(--spacing-2xl);
 }
 
 .content-wrapper {
@@ -450,13 +451,16 @@ body {
 
 /* Table of Contents */
 .table-of-contents {
-  position: sticky;
-  top: calc(var(--navbar-height) + var(--spacing-xl));
+  position: fixed;
+  left: calc(50% - var(--container-max-width) / 2 - 240px);
+  top: var(--navbar-height);
   width: 240px;
-  height: fit-content;
-  padding: var(--spacing-lg) var(--spacing-xl);
-  flex-shrink: 0;
-  order: -1;
+  height: calc(100vh - var(--navbar-height));
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: var(--color-bg);
+  border-right: 1px solid var(--color-grey-light);
+  overflow-y: auto;
+  z-index: 100;
 }
 
 .table-of-contents h3 {
@@ -636,14 +640,19 @@ body {
   .content-container {
     padding: var(--spacing-xl) var(--spacing-lg);
     flex-direction: column;
+    padding-left: var(--spacing-lg);
   }
 
   .table-of-contents {
     position: relative;
+    left: auto;
     top: auto;
     width: 100%;
+    height: auto;
     order: -1;
     margin-bottom: var(--spacing-lg);
+    border-right: none;
+    border-bottom: 1px solid var(--color-grey-light);
   }
 
   .content-header h1 {
