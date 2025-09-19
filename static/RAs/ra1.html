@@ -79,10 +79,10 @@
 
         <section class="content-section" id="laminado">
             <h2>Laminat</h2>
-            <p>El laminat és un procés de deformació en el qual l'espessor del material de treball es redueix mitjançant forces de compressió exercides per dos rodets oposats. Els rodets giren per arrossegar el material de treball i simultàniament comprimir-lo entre ells.</p>
+            <p>El laminat és un procés de deformació en el qual l'espessor del material de treball es redueix mitjançant forces de compressió exercides per dos corrons oposats. Els corrons giren per arrossegar el material de treball i simultàniament comprimir-lo entre ells.</p>
 
             <div class="content-image-wrapper">
-                <img src="images/ra1/laminado_1.png" alt="Procés de laminat amb rodets" class="content-image">
+                <img src="images/ra1/laminado_1.png" alt="Procés de laminat amb corrons" class="content-image">
                 <p class="image-footnote">Figura 1 - Procés bàsic de laminat pla</p>
             </div>
 
@@ -100,6 +100,7 @@
             <h3>Vocabulari Tècnic</h3>
             <ul>
                 <li><strong>Molins laminadors:</strong> equip pesant utilitzat per al procés de laminació</li>
+                <li><strong>Corrons:</strong> cilindres metàl·lics que exerceixen la compressió sobre el material</li>
                 <li><strong>Lingot:</strong> peça d'acer fos recentment solidificat</li>
                 <li><strong>Recalfament:</strong> operació de calentament del lingot (≈1200°C per a l'acer)</li>
                 <li><strong>Fosses de recalfament:</strong> forns on es realitza el recalfament</li>
@@ -148,7 +149,7 @@
         <section class="content-section" id="laminat-pla">
             <h2>Laminat Pla i la seva Anàlisi</h2>
 
-            <p>El laminat pla involucra el laminat de planxes, tires, làmines i plaques, amb peces de treball de secció transversal rectangular on l'amplada és major que l'espessor. En el laminat pla, es pressiona el treball entre dos rodets reduint el seu espessor.</p>
+            <p>El laminat pla involucra el laminat de planxes, tires, làmines i plaques, amb peces de treball de secció transversal rectangular on l'amplada és major que l'espessor. En el laminat pla, es pressiona el treball entre dos corrons reduint el seu espessor.</p>
 
             <h3>Draft i Reducció</h3>
             <p>El <strong>draft</strong> és la quantitat d'espessor que es redueix durant l'operació de laminat:</p>
@@ -157,16 +158,22 @@
 
             <p>on:</p>
             <ul>
-                <li>$d$ = draft</li>
-                <li>$t_0$ = espessor inicial</li>
-                <li>$t_f$ = espessor final</li>
+                <li>$d$ = draft (mm)</li>
+                <li>$t_0$ = espessor inicial (mm)</li>
+                <li>$t_f$ = espessor final (mm)</li>
             </ul>
+
+            <p><strong>Unitats:</strong> Totes les dimensions lineals s'expressen en mil·límetres (mm). Com que es tracta d'una diferència entre dues longituds de la mateixa naturalesa, el draft també es mesura en mm.</p>
 
             <p>El draft s'expressa sovint com una fracció de l'espessor del material inicial anomenada <strong>reducció</strong>:</p>
 
             $$r = \frac{d}{t_0}$$
 
-            <p>on $r$ = reducció. Quan s'utilitza una sèrie d'operacions de laminació, la reducció es pren com la suma de les reduccions acumulades dividides per l'espessor original.</p>
+            <p>on $r$ = reducció (adimensional). </p>
+
+            <p><strong>Unitats:</strong> La reducció és una relació entre dues longituds (mm/mm), per tant és adimensional i s'expressa com a fracció decimal o percentatge. Per exemple, r = 0,3 significa una reducció del 30%.</p>
+
+            <p>Quan s'utilitza una sèrie d'operacions de laminació, la reducció es pren com la suma de les reduccions acumulades dividides per l'espessor original.</p>
 
             <h3>Conservació del Volum</h3>
             <p>És fonamental que el volum que entra al procés de laminat sigui igual al volum que surt. Aquesta condició s'expressa com:</p>
@@ -175,10 +182,13 @@
 
             <p>on:</p>
             <ul>
-                <li>$w$ = amplada del material</li>
-                <li>$L$ = longitud del material</li>
+                <li>$t$ = espessor del material (mm)</li>
+                <li>$w$ = amplada del material (mm)</li>
+                <li>$L$ = longitud del material (mm)</li>
                 <li>Els subíndexs 0 i f indiquen les condicions inicial i final, respectivament</li>
             </ul>
+
+            <p><strong>Unitats:</strong> Cada terme de l'equació té dimensions de volum (mm³). El producte de tres longituds (mm × mm × mm = mm³) assegura la conservació del volum del material. Aquesta és una aplicació directa del principi de conservació de la massa en processos de deformació plàstica.</p>
 
             <p>Aquesta equació mostra que quan l'espessor es redueix, l'amplada i/o la longitud han d'augmentar per conservar el volum del material.</p>
 
@@ -187,11 +197,86 @@
 
             $$v_0 t_0 w_0 = v_f t_f w_f$$
 
-            <p>on $v_0$ i $v_f$ són les velocitats d'entrada i de sortida del material de treball, respectivament.</p>
+            <p>on:</p>
+            <ul>
+                <li>$v_0$ = velocitat d'entrada del material (mm/s)</li>
+                <li>$v_f$ = velocitat de sortida del material (mm/s)</li>
+                <li>$t_0, t_f$ = espessors inicial i final (mm)</li>
+                <li>$w_0, w_f$ = amplades inicial i final (mm)</li>
+            </ul>
 
-            <p>La velocitat dels rodets $v_r$ és generalment constant al llarg de la zona de contacte, però hi ha un canvi en l'espessor del metall que significa que la velocitat del metall també canvia al llarg de la zona de contacte. Com que el flux de metall és continu, ha de canviar de velocitat per compensar l'increment en l'amplada del material.</p>
+            <p><strong>Unitats:</strong> Aquesta equació representa un flux volumètric per unitat de longitud. El terme $v \cdot t \cdot w$ té dimensions de (mm/s) × mm × mm = mm³/s, que és un flux volumètric. La igualtat assegura la continuïtat del flux de material a través del procés.</p>
 
-            <p><strong>Punt neutre:</strong> Al punt neutre (punt N), la velocitat del treball iguala la velocitat dels rodets. Aquest punt és crític per a l'anàlisi de les forces i pressions en el procés de laminat.</p>
+            <p>Els corrons entren en contacte amb el material de treball al llarg d'un arc de contacte definit per l'angle $\theta$. Cada corró té un radi $R$ i la seva velocitat de rotació té una velocitat superficial $v_r$ (mm/s). Aquesta velocitat és major que la velocitat d'entrada $v_0$ i menor que la velocitat de sortida $v_f$.</p>
+
+            <p>Com que el flux de metall és continu, hi ha un canvi gradual en la velocitat del material de treball entre els corrons. No obstant això, existeix un punt al llarg de l'arc on la velocitat del treball iguala la velocitat del corró.</p>
+
+            <p><strong>Punt neutre:</strong> Aquest punt s'anomena <em>punt de no lliscament</em>, també conegut com a <strong>punt neutre</strong>. A qualsevol costat d'aquest punt, es produeixen lliscaments i fricció entre el corró i el material de treball.</p>
+
+            <h3>Lliscament</h3>
+
+            <div class="content-image-wrapper">
+                <img src="images/ra1/laminado_3.png" alt="Procés de laminat amb corrons" class="content-image">
+                <p class="image-footnote">Figura 2 - Formes bàsiques del laminat</p>
+            </div>
+
+            <p>La quantitat de lliscament entre els corrons i el material de treball es pot mesurar mitjançant el <strong>lliscament cap endavant</strong>:</p>
+
+            $$s = \frac{v_f - v_r}{v_r}$$
+
+            <p>on:</p>
+            <ul>
+                <li>$s$ = lliscament cap endavant (adimensional)</li>
+                <li>$v_f$ = velocitat final del treball de sortida (mm/s)</li>
+                <li>$v_r$ = velocitat del corró (mm/s)</li>
+            </ul>
+
+            <p><strong>Unitats:</strong> El lliscament és adimensional ja que és una relació entre velocitats (mm/s)/(mm/s). S'expressa com a fracció decimal o percentatge.</p>
+
+            <h3>Deformació Real</h3>
+            <p>L'esforç real experimentat pel treball laminat es basa en l'espessor del material abans i després del laminat:</p>
+
+            $$\varepsilon = \ln\frac{t_0}{t_f}$$
+
+            <p>on:</p>
+            <ul>
+                <li>$\varepsilon$ = deformació real (adimensional)</li>
+                <li>$t_0$ = espessor inicial (mm)</li>
+                <li>$t_f$ = espessor final (mm)</li>
+            </ul>
+
+            <p><strong>Unitats:</strong> La deformació real és adimensional, ja que és el logaritme natural d'una relació de longituds (mm/mm). Aquesta mesura és més adequada per a grans deformacions que la deformació convencional.</p>
+
+            <h3>Esforç de Fluència Promig</h3>
+            <p>Es pot utilitzar la deformació real per determinar l'esforç de fluència promig aplicat al material de treball en el laminat pla:</p>
+
+            $$\bar{Y_f} = \frac{K\varepsilon^n}{1+n}$$
+
+            <p>on:</p>
+            <ul>
+                <li>$\bar{Y_f}$ = esforç de fluència promig (MPa)</li>
+                <li>$K$ = coeficient de resistència del material (MPa)</li>
+                <li>$\varepsilon$ = deformació real (adimensional)</li>
+                <li>$n$ = exponent d'enduriment per deformació (adimensional)</li>
+            </ul>
+
+            <p><strong>Unitats:</strong> L'esforç de fluència promig es mesura en megapascals (MPa). Aquest valor és útil per calcular les estimacions de força i potència en laminat.</p>
+
+            <h3>Draft Màxim i Fricció</h3>
+            <p>La fricció es presenta en el laminat amb un cert coeficient de fricció, i la força de compressió dels corrons, multiplicada per aquest coeficient de fricció, dóna com a resultat una força de fricció entre els corrons i el treball.</p>
+
+            <p>Hi ha un límit per al màxim draft possible que es pot assolir en el laminat pla amb un coeficient de fricció donat:</p>
+
+            $$d_{màx} = \mu^2 R$$
+
+            <p>on:</p>
+            <ul>
+                <li>$d_{màx}$ = draft màxim (mm)</li>
+                <li>$\mu$ = coeficient de fricció (adimensional)</li>
+                <li>$R$ = radi del corró (mm)</li>
+            </ul>
+
+            <p><strong>Unitats:</strong> El draft màxim es mesura en mil·límetres (mm). El coeficient de fricció és adimensional. Aquesta equació indica que si la fricció fos zero, l'avançament podria ser zero i això faria impossible l'operació de laminat.</p>
 
         </section>
         </div>
