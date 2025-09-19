@@ -108,6 +108,10 @@
 
             <h3>Laminat en Calent vs Laminat en Fred</h3>
 
+            <div class="content-image-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EMdrcN_Edng?si=3HC8EgPmTlmui3BC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
             <h4>Laminat en Calent</h4>
             <p><strong>Avantatges:</strong></p>
             <ul>
@@ -353,6 +357,290 @@
             </ul>
 
             <p><strong>Unitats:</strong> La potència es mesura en watts (W). Aquesta fórmula considera la potència total necessària per als dos corrons del molí de laminat, on N s'expressa en revolucions per segon (rev/s).</p>
+
+        </section>
+
+        <section class="content-section" id="exercici">
+            <h2>Exercici Pràctic</h2>
+
+            <div style="background-color: #e91e63; color: white; border: 2px solid #e91e63; padding: 20px; margin: 20px 0;">
+                <h3 style="color: white; margin-top: 0;">📝 Problema</h3>
+                <p>Una tira amb un ample de 300 mm i 25 mm d'espessor s'alimenta a través d'un molí laminador amb dos corrons de 250 mm de radi cada un. L'espessor del material de treball es redueix a 22 mm en un pas, a una velocitat de corró de 50 rev/min.</p>
+
+                <p>El material de treball té una corba de fluència definida per <em>K</em> = 275 MPa i <em>n</em> = 0,15 i se suposa que el coeficient de fricció entre els corrons i el treball és de 0,12.</p>
+
+                <p><strong>Determina:</strong></p>
+                <ol>
+                    <li>Si la fricció és suficient per realitzar l'operació de laminat</li>
+                    <li>Si és així, calcula la força de laminat, el moment de torsió i la potència en cavalls de força</li>
+                </ol>
+            </div>
+
+            <details style="margin: 20px 0; border: 1px solid #ddd;">
+                <summary style="background-color: #f8f9fa; padding: 15px; cursor: pointer; font-weight: bold;">
+                    🔍 Veure Solució Pas a Pas
+                </summary>
+
+                <div style="padding: 20px;">
+                    <h3>Pas 1: Càlcul del Draft</h3>
+                    <p>El draft que s'intenta en aquesta operació de laminat és:</p>
+                    $$d = t_0 - t_f = 25 - 22 = 3 \text{ mm}$$
+
+                    <p><strong>Unitats:</strong> mm - mm = mm (diferència de longituds)</p>
+
+                    <h3>Pas 2: Verificació de la Fricció Suficient</h3>
+                    <p>De l'equació del draft màxim, el draft màxim possible per al coeficient de fricció donat és:</p>
+                    $$d_{màx} = \mu^2 R = (0{,}12)^2 \times 250 = 0{,}0144 \times 250 = 3{,}6 \text{ mm}$$
+
+                    <p><strong>Unitats:</strong> (adimensional)² × mm = mm</p>
+
+                    <p><strong>Conclusió:</strong> Com que el draft permissible màxim (3,6 mm) excedeix la reducció que es pretén (3 mm), és possible l'operació de laminat.</p>
+
+                    <h3>Pas 3: Càlcul de la Longitud de Contacte</h3>
+                    <p>Per calcular la força de laminat es necessita la longitud de contacte <em>L</em> i l'esforç de fluència promig $\bar{Y_f}$. La longitud de contacte està donada per l'equació:</p>
+                    $$L = \sqrt{R(t_0 - t_f)} = \sqrt{250 \times (25 - 22)} = \sqrt{250 \times 3} = \sqrt{750} = 27{,}4 \text{ mm}$$
+
+                    <p><strong>Unitats:</strong> √(mm × mm) = √(mm²) = mm</p>
+
+                    <h3>Pas 4: Càlcul de la Deformació Real</h3>
+                    <p>$\bar{Y_f}$ es determina per la deformació real:</p>
+                    $$\varepsilon = \ln\frac{t_0}{t_f} = \ln\frac{25}{22} = \ln(1{,}136) = 0{,}128$$
+
+                    <p><strong>Unitats:</strong> ln(mm/mm) = ln(adimensional) = adimensional</p>
+
+                    <h3>Pas 5: Càlcul de l'Esforç de Fluència Promig</h3>
+                    <p>Utilitzant l'equació de l'esforç de fluència promig:</p>
+                    $$\bar{Y_f} = \frac{K\varepsilon^n}{1+n} = \frac{275 \times (0{,}128)^{0{,}15}}{1 + 0{,}15} = \frac{275 \times 0{,}739}{1{,}15} = \frac{203{,}2}{1{,}15} = 176{,}7 \text{ MPa}$$
+
+                    <p><strong>Unitats:</strong> $\frac{\text{MPa} \times \text{adimensional}}{\text{adimensional}} = \text{MPa}$</p>
+
+                    <h3>Pas 6: Càlcul de la Força de Laminat</h3>
+                    <p>La força de laminat es determina per l'equació:</p>
+                    $$F = \bar{Y_f} \times w \times L = 176{,}7 \times 300 \times 27{,}4 = 1{,}452{,}662 \text{ N}$$
+
+                    <p><strong>Unitats:</strong> MPa × mm × mm = N (ja que 1 MPa·mm² = 1 N)</p>
+
+                    <h3>Pas 7: Càlcul del Moment de Torsió</h3>
+                    <p>El moment de torsió requerit per moure cada corró està donat per l'equació:</p>
+                    $$T = 0{,}5 \times F \times L = 0{,}5 \times 1{,}452{,}662 \times 27{,}4 = 19{,}901 \text{ N·m}$$
+
+                    <p><strong>Unitats:</strong> N × mm = N·mm → convertit a N·m (dividint per 1000)</p>
+
+                    <h3>Pas 8: Càlcul de la Potència</h3>
+                    <p>La potència s'obté de l'equació (convertint 50 rev/min a rev/s):</p>
+                    <p>$N = 50 \text{ rev/min} = \frac{50}{60} = 0{,}833 \text{ rev/s}$</p>
+
+                    $$P = 2\pi N F L = 2\pi \times 0{,}833 \times 1{,}452{,}662 \times 27{,}4 = 209{,}190 \text{ W}$$
+
+                    <p><strong>Unitats:</strong> rev/s × N × mm = W (amb conversions adequades)</p>
+
+                    <h3>Pas 9: Conversió a Cavalls de Força</h3>
+                    <p>Convertint a cavalls de força (1 hp = 745,7 W):</p>
+                    $$\text{HP} = \frac{209{,}190}{745{,}7} = 280{,}6 \text{ hp}$$
+
+                    <p><strong>Unitats:</strong> W ÷ (W/hp) = hp</p>
+
+                    <div style="background-color: #d4edda; border: 1px solid #c3e6cb; padding: 15px; margin-top: 20px;">
+                        <h4 style="color: #155724; margin-top: 0;">✅ Resultats Finals</h4>
+                        <ul style="color: #155724;">
+                            <li><strong>Fricció suficient:</strong> Sí (draft màxim = 3,6 mm > draft requerit = 3 mm)</li>
+                            <li><strong>Força de laminat:</strong> 1.452.662 N</li>
+                            <li><strong>Moment de torsió:</strong> 19.901 N·m</li>
+                            <li><strong>Potència:</strong> 280,6 hp</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; margin-top: 20px;">
+                        <h4 style="color: #856404; margin-top: 0;">💡 Observacions</h4>
+                        <p style="color: #856404;">En aquest exemple es pot observar que es requereixen grans forces i potències per al laminat. La inspecció de les equacions indica que es pot reduir la força i la potència per laminar una tira d'ample i material donats mitjançant:</p>
+                        <ol style="color: #856404;">
+                            <li>Ús de laminat en calent en lloc de laminat en fred</li>
+                            <li>Reducció del draft en cada pas</li>
+                            <li>Utilització d'un menor radi en el corró R</li>
+                            <li>Utilitzant menor velocitat de laminació N</li>
+                        </ol>
+                    </div>
+                </div>
+            </details>
+
+        </section>
+
+        <section class="content-section" id="laminat-perfils">
+            <h2>Laminat de Perfils</h2>
+
+            <p>En el laminat de perfils, el material de treball es deforma per generar un contorn en la secció transversal. Els productes fets per aquest procediment inclouen perfils de construcció com bigues en I, en L i canals en U; rails per a vies de ferrocarril i barres rodones i quadrades, així com varetes.</p>
+
+            <p>El procés es realitza fent passar el material de treball a través de corrons que tenen imprès el revers de la forma desitjada.</p>
+
+            <div class="content-image-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZVkdf5rSmQ?si=OHcnHqyKh8Qn0U-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <h3>Principis i Diferències amb el Laminat Pla</h3>
+            <p>La majoria dels principis que s'apliquen en el laminat pla són també aplicables al laminat de perfils. No obstant això, hi ha diferències importants:</p>
+
+            <ul>
+                <li><strong>Corrons formadors més complicats:</strong> Els corrons han de tenir la forma inversa del perfil desitjat</li>
+                <li><strong>Transformació gradual:</strong> El material inicial, de forma usualment quadrada, requereix una transformació gradual a través de diversos corrons per assolir la secció final</li>
+                <li><strong>Múltiples passos:</strong> Es necessiten diverses etapes per evitar deformacions excessives en un sol pas</li>
+            </ul>
+
+            <h3>Disseny de Passos de Laminació</h3>
+            <p>El disseny de la seqüència de les formes intermèdies i els corresponents corrons s'anomena <strong>disseny de passos de laminació</strong>. La seva meta és aconseguir una deformació uniforme a través de les seccions transversals de cada reducció.</p>
+
+            <p><strong>Importància de la uniformitat:</strong></p>
+            <ul>
+                <li>Si certes porcions del treball es redueixen més que altres, es causa una major elongació en aquestes seccions</li>
+                <li>La conseqüència d'una reducció no uniforme pot ser torsions i esquerdes del producte laminat</li>
+                <li>S'utilitzen corrons horitzontals i verticals per aconseguir una reducció consistent del material de treball</li>
+            </ul>
+
+            <h3>Tipus de Productes</h3>
+            <p>Els principals productes del laminat de perfils inclouen:</p>
+            <ul>
+                <li><strong>Perfils estructurals:</strong> bigues en I, en L, canals en U</li>
+                <li><strong>Rails ferroviaris:</strong> per a vies de tren i tramvia</li>
+                <li><strong>Barres:</strong> rodones, quadrades i de formes diverses</li>
+                <li><strong>Varetes:</strong> per a aplicacions industrials específiques</li>
+            </ul>
+
+        </section>
+
+        <section class="content-section" id="molins-laminadors">
+            <h2>Molins Laminadors</h2>
+
+            <div class="content-image-wrapper">
+                <img src="images/ra1/laminado_5.png" alt="Configuracions de molins laminadors" class="content-image">
+                <p class="image-footnote">Figura 4 - Diferents configuracions de molins laminadors</p>
+            </div>
+
+            <p>Es disposa de diverses configuracions de molins de laminació que manegen una varietat d'aplicacions i problemes tècnics en els processos de laminació.</p>
+
+            <h3>Molí de Laminació de Dos Corrons</h3>
+            <p>El molí de laminació bàsic consisteix en dos corrons oposats i es denomina <strong>molí de laminació de dos corrons</strong>. Els corrons en aquests molins tenen diàmetres que van de 0,6 a 1,4 m. La configuració de corrons pot ser reversible o no reversible:</p>
+
+            <ul>
+                <li><strong>Molí no reversible:</strong> Els corrons giren sempre en la mateixa direcció i el treball sempre passa a través del mateix costat</li>
+                <li><strong>Molí reversible:</strong> Permet la rotació dels corrons en ambdues direccions, de manera que el treball pot passar a través de qualsevol direcció</li>
+            </ul>
+
+            <p><strong>Avantatge del molí reversible:</strong> Permet una sèrie de reduccions que es fan a través del mateix joc de corrons, passant simplement el treball diverses vegades des de direccions oposades.</p>
+
+            <p><strong>Desavantatge del molí reversible:</strong> La quantitat significativa de moviment angular degut a la rotació de grans corrons, i els problemes tècnics associats a la reversibilitat de la direcció.</p>
+
+            <h3>Molí de Tres Corrons</h3>
+            <p>Hi ha tres corrons en una columna vertical i la direcció de rotació de cada corró roman sense canvi. Per aconseguir una sèrie de reduccions es pot passar el material de treball en qualsevol direcció, ja sigui elevant o baixant la tira després de cada pas.</p>
+
+            <p><strong>Complicació:</strong> L'equip en un molí de tres corrons es torna més complicat degut al mecanisme elevador que es necessita per elevar o baixar el material de treball.</p>
+
+            <h3>Molí de Quatre Corrons</h3>
+            <p>Com indiquen les equacions anteriors, es guanya alguns avantatges al reduir el diàmetre dels corrons. La longitud de contacte entre els corrons i el treball es redueix amb un menor radi dels corrons i això condueix a forces més baixes, menor moment de torsió i menor potència.</p>
+
+            <p>En els molins de quatre corrons s'usen dos corrons de diàmetre menor per fer contacte amb el treball i dos corrons darrere com a recolzament. Degut a les altes forces de laminat, els corrons menors podrien desviar-se elàsticament amb el pas de la laminació, si no fos pels corrons més grans de recolzament que els suporten.</p>
+
+            <h3>Molí en Conjunt o Racim</h3>
+            <p>Una altra configuració que permet l'ús de corrons menors contra el treball és el <strong>molí en conjunt o racim</strong>. Aquesta configuració permet utilitzar corrons encara més petits mantenint la rigidesa estructural necessària.</p>
+
+            <h3>Molí de Corrons en Tàndem</h3>
+            <p>Per aconseguir altes velocitats de rendiment en els productes estàndard s'usa freqüentment un <strong>molí de corrons en tàndem</strong>. Aquesta configuració consisteix en una sèrie de bastidors de corrons.</p>
+
+            <p><strong>Característiques:</strong></p>
+            <ul>
+                <li>Un molí laminador en tàndem pot tenir vuit o deu parells de corrons</li>
+                <li>Cada un realitza una reducció en l'espessor o un refinament en la forma del material de treball que passa entre ells</li>
+                <li>A cada pas de laminació s'incrementa la velocitat</li>
+                <li>És significatiu el problema de sincronitzar les velocitats dels corrons en cada etapa</li>
+            </ul>
+
+            <h3>Molins en Tàndem Moderns i Colada Contínua</h3>
+            <p>Els molins en tàndem moderns s'utilitzen amb freqüència en operacions de <strong>colada contínua</strong>. Aquestes instal·lacions aconsegueixen un alt grau de continuïtat en els processos que es requereixen per transformar les matèries primeres inicials en productes finals.</p>
+
+            <p><strong>Avantatges:</strong></p>
+            <ul>
+                <li>Eliminació de fosses de recalfament</li>
+                <li>Reducció de l'espai en les instal·lacions</li>
+                <li>Temps de manufactura més curts</li>
+                <li>Beneficis econòmics per als molins que poden realizar la colada contínua i la laminació</li>
+            </ul>
+
+        </section>
+
+        <section class="content-section" id="altres-processos">
+            <h2>Altres Processos de Deformació Relacionats amb el Laminat</h2>
+
+            <p>Alguns altres processos de deformació volumètrica usen corrons per formar les peces de treball; aquestes operacions inclouen laminat de cordes, laminat d'anells, laminat d'engranatges i perforat de corrons.</p>
+
+            <h3>Laminat de Cordes</h3>
+            <p>El laminat de cordes s'usa per formar cordes en peces cilíndriques mitjançant la seva laminació entre dos troquels. És el procés comercial més important per a producció massiva de components amb cordes externes (perns i torns, per exemple). El procés competidor és el mecanitzat de cordes.</p>
+
+            <p>La majoria de les operacions de laminat de cordes es realitza per treball en fred, utilitzant màquines laminadores de cordes. Aquestes màquines estan equipades amb troquels especials que determinen la mida i forma de la corda; els troquels són de dos tipus:</p>
+
+            <ul>
+                <li><strong>Troquels plans:</strong> que es mouen alternativament entre si</li>
+                <li><strong>Troquels rodons:</strong> que giren relativament entre si per aconseguir l'acció de laminat</li>
+            </ul>
+
+            <div class="content-image-wrapper">
+                <img src="images/ra1/laminado_6.png" alt="Laminat de cordes amb troquels plans" class="content-image">
+                <p class="image-footnote">Figura 5 - Laminat de cordes amb troquels plans: 1) inici del cicle i 2) fi del cicle</p>
+            </div>
+
+            <p><strong>Avantatges del laminat de cordes:</strong></p>
+            <ul>
+                <li>Les velocitats de producció poden ser molt altes; la seva capacitat arriba fins a 8 peces per segon per a perns i torns petits</li>
+                <li>Millor utilització del material</li>
+                <li>Cordes més fortes degut a l'enduriment per treball</li>
+                <li>Superfícies més llises</li>
+                <li>Millor resistència a la fatiga degut als esforços per compressió que s'introdueixen durant el laminat</li>
+            </ul>
+
+            <h3>Laminat d'Anells</h3>
+            <p>El laminat d'anells és un procés de deformació que lamina les parets gruixudes d'un anell per obtenir anells de parets més primes, però d'un diàmetre major. Conforme l'anell de parets gruixudes es comprimeix, el material s'allarga, ocasionant que el diàmetre de l'anell s'agrandi.</p>
+
+            <div class="content-image-wrapper">
+                <img src="images/ra1/laminado_7.png" alt="Laminació d'anells" class="content-image">
+                <p class="image-footnote">Figura 6 - Procés de laminació d'anells abans i després</p>
+            </div>
+
+            <p>El laminat d'anells s'aplica usualment en processos de treball en calent per a anells grans i en processos de treball en fred per a anells petits.</p>
+
+            <p><strong>Aplicacions del laminat d'anells:</strong></p>
+            <ul>
+                <li>Collarins per coginets de balins i rodets</li>
+                <li>Llantes d'acer per rodes de ferrocarril</li>
+                <li>Cincs per tubs, recipients a pressió i màquines rotatòries</li>
+            </ul>
+
+            <p>Les parets dels anells no es limiten a seccions rectangulars; el procés permet la laminació de formes més complexes.</p>
+
+            <p><strong>Avantatges del laminat d'anells:</strong></p>
+            <ul>
+                <li>Estalvi de matèries primeres</li>
+                <li>Orientació ideal dels grans per a l'aplicació</li>
+                <li>Enduriment a través del treball en fred</li>
+            </ul>
+
+            <h3>Laminat d'Engranatges</h3>
+            <p>Aquest és un procés de format en fred que produeix certs engranatges. La indústria automotriu és un important usuari d'aquests productes. La instal·lació per al laminat d'engranatges és similar al laminat de cordes, excepte perquè les característiques de deformació dels cilindres o discos s'orienten paral·lelament al seu eix (o a un angle en el cas d'engranatges helicoidals), en lloc de l'espiral del laminat de cordes.</p>
+
+            <p><strong>Avantatges del laminat d'engranatges:</strong></p>
+            <ul>
+                <li>Altes velocitats de producció</li>
+                <li>Millor resistència a la fatiga</li>
+                <li>Menys desperdici de material</li>
+            </ul>
+
+            <h3>Perforat de Corrons</h3>
+            <p>És un procés especialitzat de treball en calent per fer tubs sense costura de parets gruixudes. Utilitza dos corrons oposats i per tant s'agrupa entre els processos de laminat. El procés es basa en el principi que al comprimir un sòlid cilíndric sobre la seva circumferència, es generen alts esforços de tensió en el seu centre. Si la compressió és prou alta, es forma una escletxa interna.</p>
+
+            <div class="content-image-wrapper">
+                <img src="images/ra1/laminado_8.png" alt="Perforació de corrons" class="content-image">
+                <p class="image-footnote">Figura 7 - Procés de perforació de corrons per fabricar tubs sense costura</p>
+            </div>
+
+            <p>Aquest principi s'aprofita en el perforat de corrons mitjançant la disposició que es mostra en la figura. Els esforços de compressió s'apliquen sobre el toc sòlid cilíndric per dos corrons, els eixos dels quals s'orienten en petits angles (al voltant de 6°) respecte a l'eix del toc; d'aquesta manera la rotació tendeix a empènyer el toc a través dels corrons.</p>
+
+            <p>Un mandril s'encarrega de controlar la mida i acabat de la perforació creada per l'acció. S'usen els termes <strong>perforat rotatori de tubs</strong> i <strong>procés Mannesmann</strong> per a aquesta operació en la fabricació de tubs.</p>
 
         </section>
         </div>
