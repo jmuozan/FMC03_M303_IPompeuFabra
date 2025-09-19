@@ -8,7 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
     <link rel="stylesheet" href="../../styles/styles.css" />
-    <title>RA1 - Disseny d'estris de processat de xapa i estampació</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <title>UF1 - Deformacions Volumètriques</title>
 </head>
 <body>
     <!-- Navigation -->
@@ -16,12 +26,12 @@
         <a href="../../index.html" class="navbar__logo">FMC03_M303</a>
         <div class="navbar__bars"><i class="fas fa-bars"></i></div>
         <div class="navbar__menu">
-            <a href="ra1.html" class="navbar__menu--links">RA1</a>
-            <a href="pages/ra2.html" class="navbar__menu--links">RA2</a>
-            <a href="pages/ra3.html" class="navbar__menu--links">RA3</a>
-            <a href="pages/ra4.html" class="navbar__menu--links">RA4</a>
-            <a href="pages/ra5.html" class="navbar__menu--links">RA5</a>
-            <a href="pages/ra6.html" class="navbar__menu--links">RA6</a>
+            <a href="ra1.html" class="navbar__menu--links">UF1</a>
+            <a href="pages/ra2.html" class="navbar__menu--links">UF2</a>
+            <a href="pages/ra3.html" class="navbar__menu--links">UF3</a>
+            <a href="pages/ra4.html" class="navbar__menu--links">UF4</a>
+            <a href="pages/ra5.html" class="navbar__menu--links">UF5</a>
+            <a href="pages/ra6.html" class="navbar__menu--links">UF6</a>
             <a href="../info.html" class="navbar__menu--links">Info</a>
         </div>
     </nav>
@@ -39,322 +49,149 @@
         <div class="content-wrapper">
             <header class="content-header">
                 <h1>Processos de Deformació Volumètrica en el Treball de Metalls</h1>
-                <p class="content-subtitle">RA1 - Disseny d'estris de processat de xapa i estampació</p>
+                <p class="content-subtitle">UF1 - Deformacions Volumètriques</p>
                 <p class="content-meta">Institut Pompeu Fabra — Curs 2025/26</p>
             </header>
 
         <section class="content-section" id="introduccio">
             <h2>Introducció</h2>
-            <p>En la fabricació industrial existeixen tres grans categories de mètodes de manufactura per obtenir productes finals:</p>
+            <p>Els processos de deformació volumètrica realitzen un canvi significatiu en les peces de metall, on la forma inicial és més voluminosa que laminar. Les formes inicials inclouen barres, tacs cilíndrics, tacs rectangulars i planxes, així com altres formes similars elementals.</p>
 
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>Manufactura Additiva</h3>
-                    <p>Procés que construeix objectes afegint material capa per capa, com la impressió 3D.</p>
-                </div>
-                <div class="content-card">
-                    <h3>Manufactura Substractiva</h3>
-                    <p>Procés que elimina material de la peça inicial mitjançant mecanitzat, tornejat o fresatge.</p>
-                </div>
-                <div class="content-card">
-                    <h3>Manufactura per Deformació</h3>
-                    <p>Procés que canvia la forma del material sense afegir ni eliminar material, com els processos de conformat.</p>
-                </div>
-            </div>
+            <p>Els processos de deformació volumètrica refinen les formes originals, de vegades milloren les propietats mecàniques i sempre afegeixen valor comercial al producte. El treball dels processos de deformació consisteix en sotmetre el metall a un esforç suficient perquè flueixi plàsticament i prengui la forma desitjada.</p>
 
-            <p>Els processos de deformació descrits en aquest tema pertanyen a la tercera categoria i realitzen un canvi significant en les peces de metall, transformant formes inicials més voluminoses que laminars. Les formes inicials inclouen barres, tacs cilíndrics i rectangulars, planxes i altres formes similars elementals.</p>
-
-            <p>Els processos de deformació volumètrica refinen les formes originals, millorant sovint les propietats mecàniques i sempre afegint valor comercial al producte. El treball d'aquests processos consisteix en sotmetre el metall a un esforç suficient per fer que flueixi plàsticament i prengui la forma desitjada.</p>
-
-            <div class="content-image-wrapper">
-                <img src="images/introduction/base.png" alt="Base dels processos de manufactura" class="content-image">
-                <p class="image-footnote">* Procesos de Manufactura – John A. Schey – 3ra Edición McGrawHill</p>
-            </div>
-        </section>
-
-        <section class="content-section" id="concepte">
-            <h2>1.1 Concepte de Deformació Volumètrica</h2>
-            <p>Els processos de deformació volumètrica es realitzen en operacions de treball en fred i calent, tant per sobre com per sota de la temperatura de cristal·lització.</p>
-
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>Treball en Fred</h3>
-                    <p>Apropiat quan el canvi de forma és menys sever i hi ha necessitat de millorar les propietats mecàniques o aconseguir un bon acabat en la peça final.</p>
-                </div>
-                <div class="content-card">
-                    <h3>Treball en Calent</h3>
-                    <p>Es requereix generalment quan involucra la deformació volumètrica de grans peces de treball.</p>
-                </div>
-            </div>
+            <p>Els processos de deformació volumètrica es realitzen en operacions de treball en fred i calent, tant per sobre com per sota de la temperatura de cristal·lització. El treball en fred o per sota de la temperatura de cristal·lització és apropiat quan el canvi de forma és menys sever i hi ha necessitat de millorar les propietats mecàniques, o aconseguir un bon acabat en la peça final. El treball en calent es requereix generalment quan involucra la deformació volumètrica de grans peces de treball.</p>
         </section>
 
         <section class="content-section" id="importancia">
-            <h2>1.2 Importància Tecnològica i Comercial</h2>
-            <p>La importància dels processos de deformació volumètrica sorgeix dels següents aspectos:</p>
+            <h2>Importància Tecnològica i Comercial</h2>
+            <p>La importància tecnològica i comercial dels processos de deformació volumètrica sorgeix dels aspectes següents:</p>
 
-            <ul class="content-list">
-                <li><strong>Canvis significatius de forma:</strong> Amb les operacions de treball en calent es poden aconseguir canvis significatius en la forma de les peces.</li>
-                <li><strong>Millora de propietats:</strong> Les operacions de treball en fred poden incrementar la resistència mitjançant l'enduriment per deformació.</li>
-                <li><strong>Eficiència de materials:</strong> Aquests processos produeixen poc o cap residu com a subproducte de l'operació.</li>
-                <li><strong>Processos de forma neta:</strong> Algunes operacions són processos de forma neta o quasi neta, aconseguint la forma final amb poc o cap mecanitzat posterior.</li>
-            </ul>
-        </section>
+            <p>Amb les operacions de treball en calent es poden aconseguir canvis significatius en la forma de les peces de treball.</p>
 
-        <section class="content-section" id="processos">
-            <h2>1.3 Processos Principals de Deformació Volumètrica</h2>
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>Laminat</h3>
-                    <p>Procés de reducció de l'espessor de planxes i barres mitjançant compressió entre rodets.</p>
-                </div>
-                <div class="content-card">
-                    <h3>Forjat</h3>
-                    <p>Formació de metalls per aplicació de forces de compressió localitzades.</p>
-                </div>
-                <div class="content-card">
-                    <h3>Extrusió</h3>
-                    <p>Procés de formació per empenta del metall a través d'una matriu.</p>
-                </div>
-                <div class="content-card">
-                    <h3>Estirat</h3>
-                    <p>Reducció de la secció transversal de filferros i barres per tracció.</p>
-                </div>
-            </div>
-        </section>
+            <p>Les operacions de treball en fred es poden utilitzar no solament per donar forma al producte, sinó també per incrementar la seva resistència mitjançant l'enduriment per deformació.</p>
 
-        <section class="content-section" id="avantatges">
-            <h2>1.4 Avantatges dels Processos de Deformació</h2>
-            <div class="content-highlight">
-                <p><strong>Transformació amb impacte mesurable</strong></p>
-                <ul>
-                    <li>Eficiència en l'ús de materials</li>
-                    <li>Millora de les propietats mecàniques</li>
-                    <li>Producció de formes complexes</li>
-                    <li>Acabats superficials de qualitat</li>
-                </ul>
-            </div>
+            <p>Aquests processos produeixen poc o cap residu com a subproducte de l'operació.</p>
+
+            <p>Algunes operacions de deformació volumètrica són processos de forma neta o quasi neta; s'assoleix la forma final amb poc o cap mecanitzat posterior.</p>
+
+            <p>Els processos de deformació volumètrica que es cobreixen en aquest capítol són: 1) laminat, 2) forjat, 3) extrusió, 4) estirat de filferro i barres. El capítol també documenta les variants i operacions afins als quatre processos bàsics que s'han desenvolupat al llarg dels anys.</p>
         </section>
 
         <section class="content-section" id="laminado">
-            <h2>2. Laminat (Rolling)</h2>
+            <h2>Laminat</h2>
             <p>El laminat és un procés de deformació en el qual l'espessor del material de treball es redueix mitjançant forces de compressió exercides per dos rodets oposats. Els rodets giren per arrossegar el material de treball i simultàniament comprimir-lo entre ells.</p>
 
             <div class="content-image-wrapper">
                 <img src="images/ra1/laminado_1.png" alt="Procés de laminat amb rodets" class="content-image">
-                <p class="image-footnote">Figura 19.1 - Procés bàsic de laminat pla</p>
-            </div>
-
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>Laminat Pla</h3>
-                    <p>S'utilitza per reduir l'espessor d'una secció transversal rectangular. És el procés bàsic més comú.</p>
-                </div>
-                <div class="content-card">
-                    <h3>Laminat de Perfils</h3>
-                    <p>Una secció transversal quadrada es transforma en un perfil, com ara una biga en I.</p>
-                </div>
-            </div>
-
-            <h3>Característiques del Procés</h3>
-            <ul class="content-list">
-                <li><strong>Alta inversió de capital:</strong> Requereix equip pesat anomenat molins laminadors</li>
-                <li><strong>Producció en grans quantitats:</strong> L'alt cost d'inversió necessita volums elevats</li>
-                <li><strong>Productes estàndard:</strong> Làmines, plaques i perfils estructurals</li>
-            </ul>
-
-            <h3>Laminat en Calent vs. Fred</h3>
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>Laminat en Calent</h3>
-                    <p><strong>Avantatges:</strong></p>
-                    <ul>
-                        <li>Permet grans deformacions</li>
-                        <li>Materials lliures d'esforços residuals</li>
-                        <li>Propietats isotròpiques</li>
-                    </ul>
-                    <p><strong>Desavantatges:</strong></p>
-                    <ul>
-                        <li>Toleràncies menys precises</li>
-                        <li>Superfície amb capa d'òxid</li>
-                    </ul>
-                </div>
-                <div class="content-card">
-                    <h3>Laminat en Fred</h3>
-                    <p><strong>Avantatges:</strong></p>
-                    <ul>
-                        <li>Toleràncies més estretes</li>
-                        <li>Superfície lliure d'òxids</li>
-                        <li>Major resistència del metall</li>
-                        <li>Acabat superficial superior</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3>Aplicacions en la Fabricació d'Acer</h3>
-            <p>La fabricació d'acer representa l'aplicació més comuna del laminat. El procés segueix aquesta seqüència:</p>
-
-            <div class="content-highlight">
-                <p><strong>Procés de Laminació de l'Acer</strong></p>
-                <ol>
-                    <li><strong>Lingot:</strong> Acer fos recentment solidificat</li>
-                    <li><strong>Recalfament:</strong> Fins a 1200°C en fosses de recalfament</li>
-                    <li><strong>Formes intermèdies:</strong> Llúpies, topalls o planxes</li>
-                    <li><strong>Productes finals:</strong> Segons la forma intermèdia</li>
-                </ol>
-            </div>
-
-            <h3>Productes Finals</h3>
-            <ul class="content-list">
-                <li><strong>De llúpies:</strong> Perfils estructurals i rails de ferrocarril</li>
-                <li><strong>De topalls:</strong> Barres i varetes per maquinat i forjat</li>
-                <li><strong>De planxes:</strong> Plaques, làmines i tires per construcció naval, ponts, calderes i maquinària</li>
-            </ul>
-        </section>
-
-        <section class="content-section" id="laminat-pla">
-            <h2>2.1 Laminat Pla i la seva Anàlisi</h2>
-            <p>El laminat pla involucra el processament de planxes, tires, làmines i plaques amb secció transversal rectangular. El material es comprimeix entre dos rodets per reduir el seu espessor.</p>
-
-            <h3>Paràmetres Fonamentals</h3>
-            <div class="content-grid">
-                <div class="content-card">
-                    <h4>Draft (d)</h4>
-                    <p><strong>d = t₀ - tf</strong></p>
-                    <p>Reducció absoluta de l'espessor en mm</p>
-                    <ul>
-                        <li>t₀ = espessor inicial</li>
-                        <li>tf = espessor final</li>
-                    </ul>
-                </div>
-                <div class="content-card">
-                    <h4>Reducció (r)</h4>
-                    <p><strong>r = d/t₀</strong></p>
-                    <p>Fracció de l'espessor inicial que es redueix</p>
-                    <p>S'expressa com a percentatge del material original</p>
-                </div>
-            </div>
-
-            <h3>Conservació del Material</h3>
-            <p>El volumen de metall que entra als rodets ha de ser igual al volumen que en surt:</p>
-
-            <div class="content-highlight">
-                <p><strong>Conservació de Volum:</strong></p>
-                <p><strong>t₀w₀L₀ = tfwfLf</strong></p>
-                <ul>
-                    <li>w₀, wf = amplada abans i després</li>
-                    <li>L₀, Lf = longitud abans i després</li>
-                </ul>
-            </div>
-
-            <div class="content-highlight">
-                <p><strong>Conservació de Flux Volumètric:</strong></p>
-                <p><strong>t₀w₀v₀ = tfwfvf</strong></p>
-                <ul>
-                    <li>v₀, vf = velocitats d'entrada i sortida</li>
-                </ul>
-            </div>
-
-            <h3>Fenomen d'Expansió</h3>
-            <p>A més de reduir l'espessor, el laminat incrementa normalment l'amplada del material. Aquest fenomen s'anomena <strong>espargiment</strong> i és més pronunciat amb:</p>
-            <ul class="content-list">
-                <li>Baixes relacions amplada/espessor</li>
-                <li>Baixos coeficients de fricció</li>
-            </ul>
-
-            <h3>Anàlisi de Velocitats i Punt Neutre</h3>
-            <p>Els rodets entren en contacte amb el material al llarg d'un arc de contacte definit per l'angle θ. Existeix un punt crític anomenat <strong>punt de no lliscament</strong> o <strong>punt neutre</strong> on:</p>
-
-            <div class="content-grid">
-                <div class="content-card">
-                    <h4>Velocitat del Rodet (vr)</h4>
-                    <p>vr > v₀ (velocitat d'entrada)</p>
-                    <p>vr < vf (velocitat de sortida)</p>
-                </div>
-                <div class="content-card">
-                    <h4>Lliscament cap Endavant (s)</h4>
-                    <p><strong>s = (vf - vr)/vr</strong></p>
-                    <p>Mesura el lliscament entre rodets i material</p>
-                </div>
-            </div>
-
-            <h3>Deformació i Esforç de Fluència</h3>
-            <p>L'esforç real experimentat pel material es basa en la relació d'espessors:</p>
-
-            <div class="content-highlight">
-                <p><strong>Deformació Real:</strong></p>
-                <p><strong>ε = ln(t₀/tf)</strong></p>
-
-                <p><strong>Esforç de Fluència Mitjà:</strong></p>
-                <p><strong>Ȳf = Kεⁿ/(1 + n)</strong></p>
-                <ul>
-                    <li>K = constant de resistència</li>
-                    <li>n = exponent d'enduriment</li>
-                </ul>
-            </div>
-
-            <h3>Fricció i Limitacions del Procés</h3>
-            <p>La fricció és essencial per al laminat. Sense ella, el procés seria impossible. El draft màxim possible està limitat per:</p>
-
-            <div class="content-highlight">
-                <p><strong>Draft Màxim:</strong></p>
-                <p><strong>dmàx = μ²R</strong></p>
-                <ul>
-                    <li>μ = coeficient de fricció</li>
-                    <li>R = radi del rodet</li>
-                </ul>
-            </div>
-
-            <h3>Coeficients de Fricció Típics</h3>
-            <div class="content-grid">
-                <div class="content-card">
-                    <h4>Laminat en Fred</h4>
-                    <p><strong>μ ≈ 0.1</strong></p>
-                    <p>Condicions de baixa temperatura amb lubricació</p>
-                </div>
-                <div class="content-card">
-                    <h4>Laminat en Calent</h4>
-                    <p><strong>μ ≈ 0.2 - 0.4</strong></p>
-                    <p>Varia segons la temperatura de recristal·lització</p>
-                </div>
-                <div class="content-card">
-                    <h4>Condició d'Adherència</h4>
-                    <p><strong>μ ≈ 0.7</strong></p>
-                    <p>Quan la superfície calenta s'enganxa als rodets</p>
-                </div>
-            </div>
-
-            <h3>Càlculs de Força i Potència</h3>
-            <p>La força requerida pels rodets es calcula integrant la pressió unitària sobre l'àrea de contacte:</p>
-
-            <div class="content-highlight">
-                <p><strong>Força de Laminat:</strong></p>
-                <p><strong>F = w∫₀ᴸ p dL ≈ ȲfwL</strong></p>
-                <ul>
-                    <li>w = amplada del material</li>
-                    <li>p = pressió de laminat</li>
-                    <li>L = longitud de contacte</li>
-                </ul>
-
-                <p><strong>Longitud de Contacte:</strong></p>
-                <p><strong>L = √[R(t₀ - tf)]</strong></p>
-            </div>
-
-            <div class="content-highlight">
-                <p><strong>Moment de Torsió:</strong></p>
-                <p><strong>T = 0.5 × F × L</strong></p>
-
-                <p><strong>Potència Total:</strong></p>
-                <p><strong>P = 2πNFL</strong></p>
-                <ul>
-                    <li>N = velocitat rotacional (1/s)</li>
-                    <li>Factor 2 per dos rodets</li>
-                </ul>
+                <p class="image-footnote">Figura 1 - Procés bàsic de laminat pla</p>
             </div>
 
             <div class="content-image-wrapper">
-                <img src="images/ra1/laminado_1.png" alt="Distribució de pressions en laminat pla" class="content-image">
-                <p class="image-footnote">Figura 19.4 - Variació típica de pressió al llarg de la longitud de contacte. La pressió màxima es localitza al punt neutre.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5aZG7KTXWf0?si=Lzq4jTdMUtmK4Kqj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+
+            <h3>Tipus de Processos</h3>
+            <p>Es distingeixen dos tipus principals de laminat:</p>
+            <ul>
+                <li><strong>Laminat pla:</strong> per reduir l'espessor d'una secció transversal rectangular</li>
+                <li><strong>Laminat de perfils:</strong> transforma una secció quadrada en un perfil específic (bigues en I, etc.)</li>
+            </ul>
+
+            <h3>Vocabulari Tècnic</h3>
+            <ul>
+                <li><strong>Molins laminadors:</strong> equip pesant utilitzat per al procés de laminació</li>
+                <li><strong>Lingot:</strong> peça d'acer fos recentment solidificat</li>
+                <li><strong>Recalfament:</strong> operació de calentament del lingot (≈1200°C per a l'acer)</li>
+                <li><strong>Fosses de recalfament:</strong> forns on es realitza el recalfament</li>
+            </ul>
+
+            <h3>Laminat en Calent vs Laminat en Fred</h3>
+
+            <h4>Laminat en Calent</h4>
+            <p><strong>Avantatges:</strong></p>
+            <ul>
+                <li>Permet grans quantitats de deformació</li>
+                <li>Els metalls queden lliures d'esforços residuals</li>
+                <li>Propietats isotròpiques del material</li>
+            </ul>
+            <p><strong>Desavantatges:</strong></p>
+            <ul>
+                <li>No es poden mantenir toleràncies adequades</li>
+                <li>La superfície presenta una capa d'òxid característica</li>
+            </ul>
+
+            <h4>Laminat en Fred</h4>
+            <p><strong>Avantatges:</strong></p>
+            <ul>
+                <li>Fa més resistent el metall (enduriment per deformació)</li>
+                <li>Permet toleràncies més estretes de l'espessor</li>
+                <li>Superfície lliure d'incrustacions i capes d'òxid</li>
+                <li>Acabat superficial superior</li>
+            </ul>
+            <p><strong>Aplicacions:</strong> Ideal per a estampats, panells exteriors, automòbils, utensilis i mobles d'oficina.</p>
+
+            <h3>Productes del Laminat</h3>
+            <p>Les formes intermèdies es converteixen en productes finals:</p>
+            <ul>
+                <li><strong>Llúpies</strong> (≥150×150mm): perfils estructurals i rails de ferrocarril</li>
+                <li><strong>Tacs</strong> (≥40×40mm): barres i varetes per mecanitzat, estirat de filferro i forjat</li>
+                <li><strong>Planxes</strong> (≥250mm ample, ≥40mm espessor): plaques, làmines i tires per construcció naval, ponts, calderes i maquinària pesada</li>
+            </ul>
+
+            <div class="content-image-wrapper">
+                <img src="images/ra1/laminado_2.png" alt="Procés de laminat amb rodets" class="content-image">
+                <p class="image-footnote">Figura 2 - Formes bàsiques del laminat</p>
+            </div>
+
+        </section>
+
+        <section class="content-section" id="laminat-pla">
+            <h2>Laminat Pla i la seva Anàlisi</h2>
+
+            <p>El laminat pla involucra el laminat de planxes, tires, làmines i plaques, amb peces de treball de secció transversal rectangular on l'amplada és major que l'espessor. En el laminat pla, es pressiona el treball entre dos rodets reduint el seu espessor.</p>
+
+            <h3>Draft i Reducció</h3>
+            <p>El <strong>draft</strong> és la quantitat d'espessor que es redueix durant l'operació de laminat:</p>
+
+            $$d = t_0 - t_f$$
+
+            <p>on:</p>
+            <ul>
+                <li>$d$ = draft</li>
+                <li>$t_0$ = espessor inicial</li>
+                <li>$t_f$ = espessor final</li>
+            </ul>
+
+            <p>El draft s'expressa sovint com una fracció de l'espessor del material inicial anomenada <strong>reducció</strong>:</p>
+
+            $$r = \frac{d}{t_0}$$
+
+            <p>on $r$ = reducció. Quan s'utilitza una sèrie d'operacions de laminació, la reducció es pren com la suma de les reduccions acumulades dividides per l'espessor original.</p>
+
+            <h3>Conservació del Volum</h3>
+            <p>És fonamental que el volum que entra al procés de laminat sigui igual al volum que surt. Aquesta condició s'expressa com:</p>
+
+            $$t_0 w_0 L_0 = t_f w_f L_f$$
+
+            <p>on:</p>
+            <ul>
+                <li>$w$ = amplada del material</li>
+                <li>$L$ = longitud del material</li>
+                <li>Els subíndexs 0 i f indiquen les condicions inicial i final, respectivament</li>
+            </ul>
+
+            <p>Aquesta equació mostra que quan l'espessor es redueix, l'amplada i/o la longitud han d'augmentar per conservar el volum del material.</p>
+
+            <h3>Anàlisi de Velocitats</h3>
+            <p>Com que el material entra i surt del procés de manera contínua, les velocitats es poden relacionar abans i després de la passada del laminat:</p>
+
+            $$v_0 t_0 w_0 = v_f t_f w_f$$
+
+            <p>on $v_0$ i $v_f$ són les velocitats d'entrada i de sortida del material de treball, respectivament.</p>
+
+            <p>La velocitat dels rodets $v_r$ és generalment constant al llarg de la zona de contacte, però hi ha un canvi en l'espessor del metall que significa que la velocitat del metall també canvia al llarg de la zona de contacte. Com que el flux de metall és continu, ha de canviar de velocitat per compensar l'increment en l'amplada del material.</p>
+
+            <p><strong>Punt neutre:</strong> Al punt neutre (punt N), la velocitat del treball iguala la velocitat dels rodets. Aquest punt és crític per a l'anàlisi de les forces i pressions en el procés de laminat.</p>
 
         </section>
         </div>
