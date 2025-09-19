@@ -265,6 +265,16 @@
             <h3>Draft Màxim i Fricció</h3>
             <p>La fricció es presenta en el laminat amb un cert coeficient de fricció, i la força de compressió dels corrons, multiplicada per aquest coeficient de fricció, dóna com a resultat una força de fricció entre els corrons i el treball.</p>
 
+            <h4>Coeficient de Fricció</h4>
+            <p>El coeficient de fricció en el laminat depèn de diversos factors, com lubricació, material de treball i temperatura de treball:</p>
+            <ul>
+                <li><strong>Laminat en fred:</strong> valor al voltant de 0,1</li>
+                <li><strong>Treball en calent per sota de la temperatura de cristal·lització:</strong> valor típic al voltant de 0,2</li>
+                <li><strong>Laminat en calent per sobre de la temperatura de cristal·lització:</strong> μ al voltant de 0,4</li>
+            </ul>
+
+            <p>El laminat en calent es caracteritza freqüentment per una condició anomenada <em>adherència</em>, en la qual la superfície calenta del material de treball s'enganxa als corrons sobre l'arc de contacte. Aquesta condició ocorre sovint en el laminat d'acers i aleacions per a alta temperatura. Quan ocorre l'adherència, el coeficient de fricció pot ser tan alt com 0,7.</p>
+
             <p>Hi ha un límit per al màxim draft possible que es pot assolir en el laminat pla amb un coeficient de fricció donat:</p>
 
             $$d_{màx} = \mu^2 R$$
@@ -277,6 +287,72 @@
             </ul>
 
             <p><strong>Unitats:</strong> El draft màxim es mesura en mil·límetres (mm). El coeficient de fricció és adimensional. Aquesta equació indica que si la fricció fos zero, l'avançament podria ser zero i això faria impossible l'operació de laminat.</p>
+
+            <h3>Força de Laminat</h3>
+            <p>Donat un coeficient de fricció suficient per realitzar el laminat, la força de corró $F$ requerida per mantenir la separació entre els dos corrons es pot calcular. Aquesta força varia al llarg de l'arc de contacte, amb la pressió màxima localitzada al punt neutre i disminuint cap a cada costat dels punts d'entrada i sortida.</p>
+
+            <p>Es pot calcular una aproximació dels resultats basada en l'esforç de fluència promig que experimenta el material de treball en la bretxa entre els corrons:</p>
+
+            $$F = \bar{Y_f} w L$$
+
+            <p>on:</p>
+            <ul>
+                <li>$F$ = força de laminat (N)</li>
+                <li>$\bar{Y_f}$ = esforç de fluència promig (MPa)</li>
+                <li>$w$ = amplada del material de treball que s'està laminant (mm)</li>
+                <li>$L$ = longitud de contacte entre el corró i el treball (mm)</li>
+            </ul>
+
+            <p><strong>Unitats:</strong> La força de laminat es mesura en newtons (N). Aquesta aproximació es basa en l'esforç de fluència promig (MPa) multiplicat per l'àrea de contacte (mm²), donant com a resultat una força en N (ja que 1 MPa·mm² = 1 N).</p>
+
+            <div class="content-image-wrapper">
+                <img src="images/ra1/laminado_4.png" alt="Distribució de pressió en laminat" class="content-image">
+                <p class="image-footnote">Figura 3 - Variació típica de pressió al llarg de la longitud de contacte en el laminat pla</p>
+            </div>
+
+            <h3>Longitud de Contacte</h3>
+            <p>La longitud de contacte entre el corró i el treball es pot aproximar mitjançant:</p>
+
+            $$L = \sqrt{R(t_0 - t_f)}$$
+
+            <p>on:</p>
+            <ul>
+                <li>$L$ = longitud de contacte (mm)</li>
+                <li>$R$ = radi del corró (mm)</li>
+                <li>$t_0$ = espessor inicial (mm)</li>
+                <li>$t_f$ = espessor final (mm)</li>
+            </ul>
+
+            <p><strong>Unitats:</strong> La longitud de contacte es mesura en mil·límetres (mm). Aquesta fórmula proporciona una aproximació geomètrica basada en el radi del corró i la reducció d'espessor.</p>
+
+            <h3>Moment de Torsió</h3>
+            <p>El moment de torsió en laminat es pot estimar suposant que la força exercida pels corrons es centra en el treball, conforme passa entre ells i actua amb un braç de palanca de la meitat de la longitud de contacte $L$. Llavors, el moment de torsió per a cada corró és:</p>
+
+            $$T = 0,5 \cdot F \cdot L$$
+
+            <p>on:</p>
+            <ul>
+                <li>$T$ = moment de torsió (N·mm)</li>
+                <li>$F$ = força de laminat (N)</li>
+                <li>$L$ = longitud de contacte (mm)</li>
+            </ul>
+
+            <p><strong>Unitats:</strong> El moment de torsió es mesura en newton-mil·límetres (N·mm). Aquest càlcul assumeix que la força actua al punt mig de la longitud de contacte.</p>
+
+            <h3>Potència</h3>
+            <p>La potència requerida per moure cada corró és el producte del moment de torsió i la velocitat angular. La velocitat angular és $2\pi N$, on $N$ = velocitat rotacional del corró. Per tant, la potència en cada corró és $2\pi NT$. Al substituir l'equació del moment de torsió en aquesta expressió per a la potència, i al duplicar el valor, donat que un molí de laminat posseeix dos corrons, s'obté la següent expressió:</p>
+
+            $$P = 2\pi NFL$$
+
+            <p>on:</p>
+            <ul>
+                <li>$P$ = potència (W)</li>
+                <li>$N$ = velocitat rotacional del corró (rev/s)</li>
+                <li>$F$ = força de laminat (N)</li>
+                <li>$L$ = longitud de contacte (mm)</li>
+            </ul>
+
+            <p><strong>Unitats:</strong> La potència es mesura en watts (W). Aquesta fórmula considera la potència total necessària per als dos corrons del molí de laminat, on N s'expressa en revolucions per segon (rev/s).</p>
 
         </section>
         </div>
